@@ -10,37 +10,31 @@ import {
 
 const Banner = () => {
   const [distance, setDistance] = useState(0);
+  const [hasPageLoaded, setHasPageLoaded] = useState(false);
 
   useEffect(() => {
     const getPosition = () => {
       const container = document.getElementById("container imgs");
       const containerBottom: any =
         document.getElementById("containerImgBotoom");
-      const containerIglesia = document.getElementById("containerIglesia");
-      const imgFelipeCardozo = document.getElementById("felipeCardozo");
-
       if (container) {
-        const positionContainerIglesia: any =
-          containerIglesia?.getBoundingClientRect();
         const positionContainerBootomm =
           containerBottom.getBoundingClientRect();
         const position = container.getBoundingClientRect();
-        const positionFelipeCardozo: any =
-          imgFelipeCardozo?.getBoundingClientRect();
         const distance = Math.abs(
           position.bottom -
             (positionContainerBootomm.bottom -
               positionContainerBootomm.height * 0.04)
         );
-        const distanceFelipeCardozo = Math.abs(
-          positionContainerIglesia?.left - positionFelipeCardozo?.left
-        );
         setDistance(distance);
         console.log(distance);
       }
     };
-    getPosition();
-  }, []);
+    if (hasPageLoaded) {
+      getPosition();
+    }
+    setHasPageLoaded(true);
+  }, [hasPageLoaded]);
 
   return (
     <Box>

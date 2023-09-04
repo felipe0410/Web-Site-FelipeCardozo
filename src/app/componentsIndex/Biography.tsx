@@ -154,6 +154,7 @@ const Biography = () => {
                 </Typography>
               </Button>
             ))}
+          
           </Box>
         </Box>
       </Box>
