@@ -36,6 +36,7 @@ const Banner = () => {
           positionContainerIglesia?.left - positionFelipeCardozo?.left
         );
         setDistance(distance);
+        console.log(distance);
       }
     };
     getPosition();
