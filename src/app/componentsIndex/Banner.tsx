@@ -11,12 +11,13 @@ import {
 const Banner = () => {
   const [distance, setDistance] = useState(0);
   const [hasPageLoaded, setHasPageLoaded] = useState(false);
+  const [container, setContainer] = useState<any>({});
+  const [containerBottom, setcontainerBottom] = useState<any>({});
 
   useEffect(() => {
+    const container = document.getElementById("container imgs");
+    const containerBottom: any = document.getElementById("containerImgBotoom");
     const getPosition = () => {
-      const container = document.getElementById("container imgs");
-      const containerBottom: any =
-        document.getElementById("containerImgBotoom");
       if (container) {
         const positionContainerBootomm =
           containerBottom.getBoundingClientRect();
@@ -33,8 +34,12 @@ const Banner = () => {
     if (hasPageLoaded) {
       getPosition();
     }
-    setHasPageLoaded(true);
-  }, [hasPageLoaded]);
+    if (container && containerBottom) {
+      setHasPageLoaded(true);
+    }
+    setContainer(container);
+    setcontainerBottom(containerBottom);
+  }, [hasPageLoaded, container, containerBottom]);
 
   return (
     <Box>
