@@ -37,14 +37,7 @@ export default function RootLayout({
       <body style={{ background: "#fff" }}>
         <Header />
         <Box>{children}</Box>
-        <Box
-          sx={{
-            display: "block",
-            width: "100%",
-            height: "auto",
-            background: "red",
-          }}
-        >
+        <Box>
           <WhatsApp />
         </Box>
         <Footer />
