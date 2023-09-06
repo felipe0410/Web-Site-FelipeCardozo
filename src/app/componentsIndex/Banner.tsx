@@ -109,7 +109,7 @@ const Banner = () => {
               background: "linear-gradient(transparent 80%, #00873F 25%)",
               display: "flex",
               justifyContent: "space-around",
-              marginTop: { sm: distance < 250 ? 0 : `-${distance}px` },
+              marginTop: distance < 270 ? 0 : `-${distance}px`,
               zIndex: "1",
               position: "relative",
             }}
@@ -135,7 +135,7 @@ const Banner = () => {
               width={"60%"}
             >
               <Box
-                sx={{ height: { xs: "70%", lg: "auto" }, marginTop: "auto" }}
+                sx={{ height: { xs: "85%", lg: "auto" }, marginTop: "auto" }}
                 id="felipeCardozo"
                 component={"img"}
                 src={felipeCardozo}
