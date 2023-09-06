@@ -28,7 +28,9 @@ const Banner = () => {
               positionContainerBootomm.height * 0.04)
         );
         setDistance(distance);
-        console.log(distance);
+        console.log("distance:::>", distance);
+        console.log("distance:::>", container);
+        console.log("distance:::>", containerBottom);
       }
     };
     if (hasPageLoaded) {
@@ -103,7 +105,7 @@ const Banner = () => {
           background: "linear-gradient(transparent 80%, #00873F 25%)",
           display: "flex",
           justifyContent: "space-around",
-          marginTop: distance < 200 ? "-36%" : `-${distance}px`,
+          marginTop: `-${distance}px`,
           zIndex: "1",
           position: "relative",
         }}
