@@ -2,9 +2,18 @@
 import { Box, Typography, Button } from "@mui/material";
 import CarouselComponent from "./carousel";
 import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
-const Biography = () => {
+const Biography = ({
+  videoLoaded,
+  setVideoLoaded,
+}: {
+  videoLoaded: any;
+  setVideoLoaded: any;
+}) => {
   const [heigth, setHeigth] = useState(0);
+  const [videoLoadedd, setVideoLoadedd] = useState(true);
+
   const buttons = [
     {
       name: "aboutMe",
@@ -27,8 +36,22 @@ const Biography = () => {
       }
     };
     getPosition();
-  }, []);
+    console.log(videoLoadedd);
+  }, [videoLoaded, videoLoadedd]);
 
+  const handleVideoLoaded = () => {
+    setVideoLoadedd(true);
+    console.log("entro aqui");
+    console.log(videoLoaded);
+  };
+  const handleVideoCanPlayThrough = () => {
+    // Establecer videoLoaded en false después de 5 segundos
+    setVideoLoaded(false);
+    setTimeout(() => {
+      console.log(videoLoaded);
+      console.log("entro aqui");
+    }, 100);
+  };
   return (
     <Box>
       <Box
@@ -38,6 +61,16 @@ const Biography = () => {
           alignItems: "center",
         }}
       >
+        {/* <video
+          style={{ borderRadius: "0 0 25px 25px" }}
+          loop
+          muted
+          autoPlay
+          // onLoadedMetadata={handleVideoLoaded}
+          // onCanPlayThrough={handleVideoCanPlayThrough}
+        >
+          <source src="/welcome2.mp4" type="video/mp4" />
+        </video> */}
         <Box
           sx={{
             background: 'url("/image.svg")',
@@ -52,13 +85,21 @@ const Biography = () => {
           }}
           width={{ xs: "50%", md: "27%" }}
         >
+          {/* <ReactPlayer
+            controls={true}
+            muted={videoLoadedd}
+            playing={true}
+            url="/welcome2.mp4"
+            onStart={() => setVideoLoadedd(false)}
+          /> */}
           <video
             style={{ borderRadius: "0 0 25px 25px" }}
             controls
-            loop
-            autoPlay={true}
+            autoPlay
+            // muted={videoLoadedd}
+            onCanPlayThrough={handleVideoCanPlayThrough}
           >
-            <source src="/welcome.mp4" type="video/mp4" />
+            <source src="/welcome2.mp4" type="video/mp4" />
           </video>
         </Box>
         <Box
@@ -154,7 +195,6 @@ const Biography = () => {
                 </Typography>
               </Button>
             ))}
-          
           </Box>
         </Box>
       </Box>
