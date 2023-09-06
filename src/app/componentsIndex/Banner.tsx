@@ -10,38 +10,31 @@ import {
 
 const Banner = () => {
   const [distance, setDistance] = useState(0);
-  const [hasPageLoaded, setHasPageLoaded] = useState(false);
-  const [container, setContainer] = useState<any>({});
-  const [containerBottom, setcontainerBottom] = useState<any>({});
+  const [intent, setIntnet] = useState(0);
 
-  useEffect(() => {
+  const test2 = () => {
     const container = document.getElementById("container imgs");
     const containerBottom: any = document.getElementById("containerImgBotoom");
-    const getPosition = () => {
-      if (container) {
-        const positionContainerBootomm =
-          containerBottom.getBoundingClientRect();
-        const position = container.getBoundingClientRect();
-        const distance = Math.abs(
-          position.bottom -
-            (positionContainerBootomm.bottom -
-              positionContainerBootomm.height * 0.04)
-        );
-        setDistance(distance);
-        console.log("distance:::>", distance);
-        console.log("distance:::>", container);
-        console.log("distance:::>", containerBottom);
-      }
-    };
-    if (hasPageLoaded) {
-      getPosition();
+    if (container) {
+      const positionContainerBootomm = containerBottom.getBoundingClientRect();
+      const position = container.getBoundingClientRect();
+      const distance = Math.abs(
+        position.bottom -
+          (positionContainerBootomm.bottom -
+            positionContainerBootomm.height * 0.04)
+      );
+      setDistance(distance);
+      return distance;
     }
-    if (container && containerBottom) {
-      setHasPageLoaded(true);
+  };
+
+  useEffect(() => {
+    if (distance < 270) {
+      test2();
+      setIntnet((e) => e + 1);
     }
-    setContainer(container);
-    setcontainerBottom(containerBottom);
-  }, [hasPageLoaded, container, containerBottom]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [intent]);
 
   return (
     <Box>
