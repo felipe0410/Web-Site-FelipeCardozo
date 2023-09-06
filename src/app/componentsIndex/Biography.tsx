@@ -96,7 +96,7 @@ const Biography = ({
             style={{ borderRadius: "0 0 25px 25px" }}
             controls
             autoPlay
-            // muted={videoLoadedd}
+            muted={videoLoadedd}
             onCanPlayThrough={handleVideoCanPlayThrough}
           >
             <source src="/welcome2.mp4" type="video/mp4" />
