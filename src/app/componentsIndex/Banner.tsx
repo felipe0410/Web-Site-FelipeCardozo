@@ -43,7 +43,10 @@ const Banner = () => {
         <Box
           id="content all"
           sx={{
-            opacity: distance < 270 ? "0%" : "100%",
+            opacity: {
+              xs: distance < 200 ? "0%" : "100%",
+              sm: distance < 270 ? "0%" : "100%",
+            },
           }}
         >
           <Box
@@ -106,7 +109,7 @@ const Banner = () => {
               background: "linear-gradient(transparent 80%, #00873F 25%)",
               display: "flex",
               justifyContent: "space-around",
-              marginTop: `-${distance}px`,
+              marginTop: { sm: distance < 250 ? 0 : `-${distance}px` },
               zIndex: "1",
               position: "relative",
             }}
