@@ -10,7 +10,6 @@ const Header = () => {
     { name: "INICIO", patch: "/" },
     { name: "TRAYECTORIA", patch: "/trayectoria" },
     { name: "PROPUESTAS", patch: "/propuestas" },
-    { name: "CONTÁCTAME", patch: "/contactame" },
   ];
 
   return (

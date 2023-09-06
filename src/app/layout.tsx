@@ -1,3 +1,4 @@
+"use client";
 import { Box } from "@mui/material";
 import Header from "../../components/header/header";
 import "./globals.css";
@@ -13,6 +14,7 @@ import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
 import Footer from "../../components/footer/footer";
+import WhatsApp from "../../components/buttonWhatsaap/buttonWhatsaap";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
@@ -20,10 +22,10 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Felipe Cardozo",
-  description: "Felipe Cardozo",
-};
+// export const metadata: Metadata = {
+//   title: "Felipe Cardozo",
+//   description: "Felipe Cardozo",
+// };
 
 export default function RootLayout({
   children,
@@ -35,6 +37,16 @@ export default function RootLayout({
       <body style={{ background: "#fff" }}>
         <Header />
         <Box>{children}</Box>
+        <Box
+          sx={{
+            display: "block",
+            width: "100%",
+            height: "auto",
+            background: "red",
+          }}
+        >
+          <WhatsApp />
+        </Box>
         <Footer />
       </body>
     </html>
