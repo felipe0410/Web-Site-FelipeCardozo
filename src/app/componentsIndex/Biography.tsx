@@ -2,7 +2,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import CarouselComponent from "./carousel";
 import { useEffect, useState } from "react";
-import ReactPlayer from "react-player";
+import Link from "next/link";
 
 const Biography = ({
   videoLoaded,
@@ -23,7 +23,7 @@ const Biography = ({
     {
       name: "myMayor",
       text: "Conoce mi gestion en la alcaldia de Aquitania 2016-2019",
-      patch: "/trayectoria",
+      patch: "/trayectoria#gestion",
     },
   ];
   useEffect(() => {
@@ -61,16 +61,6 @@ const Biography = ({
           alignItems: "center",
         }}
       >
-        {/* <video
-          style={{ borderRadius: "0 0 25px 25px" }}
-          loop
-          muted
-          autoPlay
-          // onLoadedMetadata={handleVideoLoaded}
-          // onCanPlayThrough={handleVideoCanPlayThrough}
-        >
-          <source src="/welcome2.mp4" type="video/mp4" />
-        </video> */}
         <Box
           sx={{
             background: 'url("/image.svg")',
@@ -85,13 +75,6 @@ const Biography = ({
           }}
           width={{ xs: "50%", md: "27%" }}
         >
-          {/* <ReactPlayer
-            controls={true}
-            muted={videoLoadedd}
-            playing={true}
-            url="/welcome2.mp4"
-            onStart={() => setVideoLoadedd(false)}
-          /> */}
           <video
             style={{ borderRadius: "0 0 25px 25px" }}
             controls
@@ -167,32 +150,33 @@ const Biography = ({
           >
             {buttons.map((button) => (
               <Button
+                style={{ background: "#08406A" }}
                 sx={{
                   height: heigth === 0 ? "auto" : `${heigth}px`,
                   width: "45%",
                   padding: "10px",
                   borderRadius: "40px",
-                  background: "#08406A",
                   boxShadow:
                     "0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 }}
                 id={button.name}
-                href={button.patch}
                 key={button.name}
               >
-                <Typography
-                  sx={{
-                    color: "#FFF",
-                    textAlign: "center",
-                    fontFamily: "Inter",
-                    fontSize: { xs: "10px", md: "20px" },
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "normal",
-                  }}
-                >
-                  {button.text}
-                </Typography>
+                <Link href={button.patch}>
+                  <Typography
+                    sx={{
+                      color: "#FFF",
+                      textAlign: "center",
+                      fontFamily: "Inter",
+                      fontSize: { xs: "10px", md: "20px" },
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "normal",
+                    }}
+                  >
+                    {button.text}
+                  </Typography>
+                </Link>
               </Button>
             ))}
           </Box>

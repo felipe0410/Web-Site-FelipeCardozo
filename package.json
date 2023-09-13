@@ -21,14 +21,20 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
+    "pdfjs-dist": "^3.10.111",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-floating-whatsapp": "^5.0.8",
     "react-multi-carousel": "^2.8.4",
+    "react-pdf": "^7.3.3",
     "react-player": "^2.13.0",
     "react-read-more-read-less": "^1.0.7",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "raw-loader": "^4.0.2"
   }
 }
