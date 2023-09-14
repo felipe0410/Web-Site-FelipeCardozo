@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import LazyLoad from "react-lazy-load";
 
 const Banner = () => {
   return (
@@ -27,11 +28,13 @@ const Banner = () => {
       >
         Te cuento un poco de mi vida
       </Typography>
-      <Box
-        sx={{ margin: "0 auto" }}
-        component={"img"}
-        src="/trayectoria/trayectoria.svg"
-      />
+      <LazyLoad>
+        <Box
+          sx={{ margin: "0 auto" }}
+          component={"img"}
+          src="/trayectoria/trayectoria.svg"
+        />
+      </LazyLoad>
     </Box>
   );
 };

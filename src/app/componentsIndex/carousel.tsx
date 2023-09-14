@@ -2,6 +2,8 @@
 import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import LazyLoad from 'react-lazy-load';
+
 // import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const CarouselComponent = () => {
@@ -51,12 +53,14 @@ const CarouselComponent = () => {
     >
       {slides.map((slide, index) => (
         <div key={index}>
-          <Box
-            sx={{ margin: "0 auto" }}
-            component="img"
-            src={slide}
-            alt={`slide- ${index}`}
-          />
+          <LazyLoad>
+            <Box
+              sx={{ margin: "0 auto" }}
+              component="img"
+              src={slide}
+              alt={`slide- ${index}`}
+            />
+          </LazyLoad>
         </div>
       ))}
     </Carousel>

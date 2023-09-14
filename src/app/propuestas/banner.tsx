@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import LazyLoad from "react-lazy-load";
 
 const Banner = () => {
   return (
@@ -37,7 +38,9 @@ const Banner = () => {
             justifyContent: "flex-end",
           }}
         >
-          <Box component={"img"} src="/amaya.svg" />
+          <LazyLoad>
+            <Box component={"img"} src="/amaya.svg" />
+          </LazyLoad>
         </Box>
         <Box
           sx={{

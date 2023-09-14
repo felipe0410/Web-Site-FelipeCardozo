@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Banner from "./banner";
 import { arrayPropuestas1, arrayPropuestas2 } from "./arraysPropuestas";
+import LazyLoad from 'react-lazy-load';
 interface Propuestas {
   title: string;
   img: string;
@@ -23,7 +24,9 @@ const Index = () => {
             key={element.title}
           >
             <Box width={"30%"}>
-              <Box component={"img"} src={element.img} />
+              <LazyLoad>
+                <Box component={"img"} src={element.img} />
+              </LazyLoad>
             </Box>
             <Box width={"100%"} sx={{ marginX: "20px" }}>
               <Typography
