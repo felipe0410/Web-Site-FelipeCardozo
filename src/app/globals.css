@@ -16,6 +16,33 @@
   }
 }
 
+@font-face {
+  font-family: "ClementePDai";
+  src: url("/font/ClementePDai/ClementePDai-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClementePDar";
+  src: url("/font/ClementePDai/ClementePDar-UltraBoldItali.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClementePDap";
+  src: url("/font/ClementePDai/Clemente\ PDap\ HeavyItalic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "ClementePDai", sans-serif;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
