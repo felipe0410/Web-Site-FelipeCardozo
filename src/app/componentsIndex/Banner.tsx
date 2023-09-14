@@ -73,13 +73,13 @@ const Banner = () => {
               }}
               width={{ xs: "100%", md: "50%" }}
             >
-              <LazyLoad>
+              {/* <LazyLoad> */}
                 <Box
                   sx={{ margin: "0 auto", width: { xs: "70%", sm: "auto" } }}
                   component={"img"}
                   src={bannerFelipeCardozo}
                 />
-              </LazyLoad>
+              {/* </LazyLoad> */}
               <Typography
                 sx={{
                   color: "#08406A",
@@ -95,7 +95,7 @@ const Banner = () => {
               </Typography>
             </Box>
             <Box id="containerIglesia" width={"50%"}>
-              <LazyLoad>
+              {/* <LazyLoad> */}
                 <Box
                   sx={{
                     marginLeft: "auto",
@@ -105,7 +105,7 @@ const Banner = () => {
                   component={"img"}
                   src={backgorund}
                 />
-              </LazyLoad>
+              {/* </LazyLoad> */}
             </Box>
           </Box>
           <Box
@@ -141,14 +141,14 @@ const Banner = () => {
               }}
               width={"60%"}
             >
-              <LazyLoad>
+              {/* <LazyLoad> */}
                 <Box
                   sx={{ height: { xs: "85%", lg: "auto" }, marginTop: "auto" }}
                   id="felipeCardozo"
                   component={"img"}
                   src={felipeCardozo}
                 />
-              </LazyLoad>
+              {/* </LazyLoad> */}
               <Box
                 id="LazyLoad"
                 style={{ alignItems: "flex-end", display: "flex" }}
