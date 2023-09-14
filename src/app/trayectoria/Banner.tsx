@@ -32,7 +32,7 @@ const Banner = () => {
         <Box
           sx={{ margin: "0 auto" }}
           component={"img"}
-          src="/trayectoria/trayectoria.svg"
+          src="/trayectoria/trayectoria.png"
         />
       </LazyLoad>
     </Box>
