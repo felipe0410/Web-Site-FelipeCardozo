@@ -1,8 +1,9 @@
+"use client";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Banner from "./banner";
 import { arrayPropuestas1, arrayPropuestas2 } from "./arraysPropuestas";
-import LazyLoad from 'react-lazy-load';
+import LazyLoad from "react-lazy-load";
 interface Propuestas {
   title: string;
   img: string;
