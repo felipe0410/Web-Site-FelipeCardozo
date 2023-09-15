@@ -144,20 +144,15 @@ const Banner = () => {
                 src={felipeCardozo}
               />
               <Box
-                id="LazyLoad"
-                style={{ alignItems: "flex-end", display: "flex" }}
-              >
-                  <Box
-                    sx={{
-                      marginTop: "auto",
-                      display: { xs: "block", md: "none" },
-                      width: "50%",
-                      marginBottom: "3%",
-                    }}
-                    component={"img"}
-                    src={partidoVerde}
-                  />
-              </Box>
+                sx={{
+                  marginTop: "auto",
+                  display: { xs: "block", md: "none" },
+                  width: "50%",
+                  marginBottom: "3%",
+                }}
+                component={"img"}
+                src={partidoVerde}
+              />
             </Box>
           </Box>
         </Box>
