@@ -27,11 +27,11 @@ const CarouselComponent = () => {
       description: "",
       img: "/carouselIndex/SEGUNDO PISO CASA CULTURAL.png",
     },
-    // {
-    //   obra: "Adecuacion coliseo municipal",
-    //   description: "",
-    //   img: "/public/carouselIndex",
-    // },
+    {
+      obra: "Adecuacion coliseo municipal",
+      description: "",
+      img: "/carouselIndex/adecuacion coliseo cubierto .png",
+    },
     {
       obra: "Planta de tratamiento de aguas PTAR",
       description: "",
