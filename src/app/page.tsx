@@ -4,7 +4,6 @@ import Banner from "./componentsIndex/Banner";
 import Biography from "./componentsIndex/Biography";
 import { Skeleton, Stack } from "@mui/material";
 
-
 export default function Home() {
   const [isComplete, setIsComplete] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -26,7 +25,7 @@ export default function Home() {
     <main>
       {isComplete ? (
         <>
-          {/* <Banner /> */}
+          <Banner />
           <Biography
             videoLoaded={videoLoaded}
             setVideoLoaded={setVideoLoaded}
