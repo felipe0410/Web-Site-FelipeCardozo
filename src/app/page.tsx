@@ -26,7 +26,7 @@ export default function Home() {
     <main>
       {isComplete ? (
         <>
-          <Banner />
+          {/* <Banner /> */}
           <Biography
             videoLoaded={videoLoaded}
             setVideoLoaded={setVideoLoaded}

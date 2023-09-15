@@ -6,5 +6,5 @@ export const felipeCardozo =
 export const bannerFelipeCardozo =
     "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/bannerFelipe.svg?alt=media&token=2ca83783-0068-4132-96aa-90e59ee593c1";
 export const backgorund =
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/backgroundFelipeCardozo.svg?alt=media&token=302ec858-d46c-4801-bd23-09b8f7592ed6";
+    "/Group 3.svg";
 export const mockupPhone = "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2Fmockup.svg?alt=media&token=12cded63-1847-4141-b49d-6a82cd5c98c5"    
