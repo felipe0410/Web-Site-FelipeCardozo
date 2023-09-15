@@ -10,32 +10,32 @@ const CarouselComponent = () => {
     {
       obra: "Piscina municipal",
       description: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/CENTRO%20DE%20INTEGRACION%20DEPORTIV.svg?alt=media&token=36580ced-612d-4b2e-b9f8-363dd4e9a81a",
+      img: "/carouselIndex/CENTRO DE INTEGRACION DEPORTIV.png",
     },
     {
       obra: "Coliseo San Juan de Mombita",
       description: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/COLISEO%20SAN%20JUAN%20DE%20MOMBITA.svg?alt=media&token=10bdafa9-1a50-4a01-85f5-d8b6eea96209",
+      img: "/carouselIndex/COLISEO SAN JUAN DE MOMBITA.png",
     },
     {
       obra: "Parque ecoturistico",
       description: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/PARQUE%20ECOTURISTICO.svg?alt=media&token=5db4c164-4d1f-4356-9fd3-09233051cec8",
+      img: "/carouselIndex/PARQUE ECOTURISTICO.png",
     },
     {
       obra: "Segundo piso casa de la cultura",
       description: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/SEGUNDO%20PISO%20CASA%20CULTURAL.svg?alt=media&token=f6fdc4bc-cf9d-4e9b-979d-8c188551b8cd",
+      img: "/carouselIndex/SEGUNDO PISO CASA CULTURAL.png",
     },
-    {
-      obra: "Adecuacion coliseo municipal",
-      description: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/adecuacion%20coliseo%20cubierto.svg?alt=media&token=21198450-5726-479d-8c1e-2861f5e02c42",
-    },
+    // {
+    //   obra: "Adecuacion coliseo municipal",
+    //   description: "",
+    //   img: "/public/carouselIndex",
+    // },
     {
       obra: "Planta de tratamiento de aguas PTAR",
       description: "",
-      img: "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/planta%20de%20tratamiento%20de%20aguas%20ptar.svg?alt=media&token=1a0e2bf0-2410-459a-801f-748a5ace1a9d",
+      img: "/carouselIndex/planta de tratamiento de aguas ptar.png",
     },
   ];
   const responsive = {
