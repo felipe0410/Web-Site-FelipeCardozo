@@ -34,3 +34,5 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_FELIPECARDOZO_HOSTING_DEPLOYMENT }}"
           channelId: live
           projectId: felipecardozo-ed518
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
