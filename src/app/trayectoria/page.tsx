@@ -7,7 +7,7 @@ import PDFViewer from "./viewPDF";
 
 const Index = () => {
   const pdfUrl =
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/gestion%202016-2019.pdf?alt=media&token=97a4d02a-c929-44fb-9077-3e33a03d357a";
+    "https://drive.google.com/file/d/1GkOinwkWup7IifdpK5vE8yeSjbJ8zYWR/view";
 
   return (
     <Box>
