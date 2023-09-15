@@ -1,15 +1,18 @@
 {
   "hosting": {
-    "public": "out",
+    "source": "/home/felipem/Documents/felipe Cardozo",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
+    "frameworksBackend": {
+      "region": "us-east1"
+    },
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "nextjsFunc"
       }
     ]
   }

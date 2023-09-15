@@ -2,10 +2,10 @@
 import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const pathname = usePathname();
-  console.log("%cpathname::>", "color:red", pathname);
   const sectionsHeader = [
     { name: "INICIO", patch: "/" },
     { name: "TRAYECTORIA", patch: "/trayectoria" },

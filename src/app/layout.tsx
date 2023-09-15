@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import Header from "../../components/header/header";
 import "./globals.css";
-import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 import "@fontsource/inter/100.css";
 import "@fontsource/inter/200.css";
@@ -32,6 +32,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  
   return (
     <html lang="en" style={{ background: "#fff" }} className={inter.className}>
       <body style={{ background: "#fff" }}>
