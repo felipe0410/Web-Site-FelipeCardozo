@@ -2,18 +2,17 @@
 import { Box } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import LazyLoad from 'react-lazy-load';
 
 // import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const CarouselComponent = () => {
   const slides = [
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2F1.svg?alt=media&token=1b6fdb16-a1da-4051-a028-07a2e33dfa0e",
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2F2.svg?alt=media&token=3412e7fc-6fcc-4888-8677-3e5d57c0b86b",
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2F3.svg?alt=media&token=9138b78e-87ae-497f-a977-b09fd60faa9b",
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2F4.svg?alt=media&token=2def944c-9db4-408e-b949-865f595e19ea",
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2F5.svg?alt=media&token=83cd24e1-6ebb-48f1-a63e-8889685217d3",
-    "https://firebasestorage.googleapis.com/v0/b/felipecardozo-ed518.appspot.com/o/carouselIndex%2F6.svg?alt=media&token=671a5cd2-9c3a-4947-9ba5-40ffef988c18",
+    "/carousel_Index/1.png",
+    "/carousel_Index/2.png",
+    "/carousel_Index/3.png",
+    "/carousel_Index/4.png",
+    "/carousel_Index/5.png",
+    "/carousel_Index/6.png",
   ];
   const responsive = {
     desktop: {
@@ -34,8 +33,6 @@ const CarouselComponent = () => {
   };
   return (
     <Carousel
-      //   customLeftArrow={<ArrowBackIosIcon sx={{transform: 'rotate(45deg)'}}/>}
-      //   customRightArrow={<ArrowBackIosIcon />}
       swipeable={false}
       draggable={true}
       showDots={true}
@@ -53,14 +50,12 @@ const CarouselComponent = () => {
     >
       {slides.map((slide, index) => (
         <div key={index}>
-          <LazyLoad>
-            <Box
-              sx={{ margin: "0 auto" }}
-              component="img"
-              src={slide}
-              alt={`slide- ${index}`}
-            />
-          </LazyLoad>
+          <Box
+            sx={{ margin: "0 auto" }}
+            component="img"
+            src={slide}
+            alt={`slide- ${index}`}
+          />
         </div>
       ))}
     </Carousel>

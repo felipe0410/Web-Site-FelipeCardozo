@@ -7,7 +7,6 @@ import {
   felipeCardozo,
   partidoVerde,
 } from "./imgs";
-import LazyLoad from "react-lazy-load";
 
 const Banner = () => {
   const [distance, setDistance] = useState(0);
@@ -36,8 +35,7 @@ const Banner = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [intent]);
-  console.log("distance::>", distance);
-  console.log("intent:::>", distance);
+
   return (
     <>
       {
@@ -74,11 +72,11 @@ const Banner = () => {
               width={{ xs: "100%", md: "50%" }}
             >
               {/* <LazyLoad> */}
-                <Box
-                  sx={{ margin: "0 auto", width: { xs: "70%", sm: "auto" } }}
-                  component={"img"}
-                  src={bannerFelipeCardozo}
-                />
+              <Box
+                sx={{ margin: "0 auto", width: { xs: "70%", sm: "auto" } }}
+                component={"img"}
+                src={bannerFelipeCardozo}
+              />
               {/* </LazyLoad> */}
               <Typography
                 sx={{
@@ -96,15 +94,15 @@ const Banner = () => {
             </Box>
             <Box id="containerIglesia" width={"50%"}>
               {/* <LazyLoad> */}
-                <Box
-                  sx={{
-                    marginLeft: "auto",
-                    width: "100%",
-                    opacity: { xs: "0%", md: "100%" },
-                  }}
-                  component={"img"}
-                  src={backgorund}
-                />
+              <Box
+                sx={{
+                  marginLeft: "auto",
+                  width: "100%",
+                  opacity: { xs: "0%", md: "100%" },
+                }}
+                component={"img"}
+                src={backgorund}
+              />
               {/* </LazyLoad> */}
             </Box>
           </Box>
@@ -123,16 +121,14 @@ const Banner = () => {
               sx={{ display: "flex", justifyContent: "center" }}
               width={{ xs: "0%", md: "50%" }}
             >
-              <LazyLoad>
-                <Box
-                  sx={{
-                    marginTop: "auto",
-                    display: { xs: "none", md: "block" },
-                  }}
-                  component={"img"}
-                  src={partidoVerde}
-                />
-              </LazyLoad>
+              <Box
+                sx={{
+                  marginTop: "auto",
+                  display: { xs: "none", md: "block" },
+                }}
+                component={"img"}
+                src={partidoVerde}
+              />
             </Box>
             <Box
               sx={{
@@ -141,19 +137,16 @@ const Banner = () => {
               }}
               width={"60%"}
             >
-              {/* <LazyLoad> */}
-                <Box
-                  sx={{ height: { xs: "85%", lg: "auto" }, marginTop: "auto" }}
-                  id="felipeCardozo"
-                  component={"img"}
-                  src={felipeCardozo}
-                />
-              {/* </LazyLoad> */}
+              <Box
+                sx={{ height: { xs: "85%", lg: "auto" }, marginTop: "auto" }}
+                id="felipeCardozo"
+                component={"img"}
+                src={felipeCardozo}
+              />
               <Box
                 id="LazyLoad"
                 style={{ alignItems: "flex-end", display: "flex" }}
               >
-                <LazyLoad>
                   <Box
                     sx={{
                       marginTop: "auto",
@@ -164,7 +157,6 @@ const Banner = () => {
                     component={"img"}
                     src={partidoVerde}
                   />
-                </LazyLoad>
               </Box>
             </Box>
           </Box>

@@ -23,7 +23,20 @@ const Footer = () => {
     },
   ];
   return (
-    <Box>
+    <Box marginTop={"5%"}>
+      <Typography
+        sx={{
+          textAlignLast: "center",
+          color: "#00873F",
+          fontFamily: "ClementePDap",
+          fontSize: { xs: "20px", sm: "48px" },
+          fontStyle: "italic",
+          fontWeight: 900,
+          lineHeight: "normal",
+        }}
+      >
+        Contáctame
+      </Typography>
       <Box
         sx={{
           background: 'url("/footerImg.svg")',

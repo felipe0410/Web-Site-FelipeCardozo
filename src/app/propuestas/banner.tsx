@@ -1,17 +1,16 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import LazyLoad from "react-lazy-load";
 
 const Banner = () => {
   return (
     <Box
       sx={{
         background:
-          'linear-gradient(transparent 94%, #00873F 6%),url("/back.svg")',
-        padding: "5%",
+          'linear-gradient(transparent 94%, #00873FD4 6%),url("/back.png")',
+        padding: { xs: "7% 5%", sm: "4.7%" },
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "initial",
       }}
     >
       <Typography
@@ -39,9 +38,7 @@ const Banner = () => {
             justifyContent: "flex-end",
           }}
         >
-          <LazyLoad>
-            <Box component={"img"} src="/amaya.svg" />
-          </LazyLoad>
+          <Box component={"img"} src="/amaya.png" />
         </Box>
         <Box
           sx={{

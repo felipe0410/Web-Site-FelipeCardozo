@@ -60,7 +60,7 @@ function PDFViewer() {
         REVISTA GESTION 2016-2019
       </Typography>
       <Document
-        file={"/cartilla chano.pdf"}
+        file={"/gestion 2016-2019 .pdf"}
         onLoadSuccess={onDocumentLoadSuccess}
       >
         <Page
