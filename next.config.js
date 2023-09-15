@@ -9,25 +9,25 @@ const nextConfig = {
 
         return config;
     },
-    async redirects() {
-        return [
-            {
-                source: '/',
-                destination: '/', // Redirige la ruta raíz "/" a "/home"
-                permanent: true,
-            },
-            {
-                source: '/propuestas',
-                destination: '/propuestas', // Redirige "/propuestas" a "/proposals"
-                permanent: true,
-            },
-            {
-                source: '/trayectoria',
-                destination: '/trayectoria', // Redirige "/trayectoria" a "/history"
-                permanent: true,
-            },
-        ]
-    },
+    // async redirects() {
+    //     return [
+    //         {
+    //             source: '/',
+    //             destination: '/', // Redirige la ruta raíz "/" a "/home"
+    //             permanent: true,
+    //         },
+    //         {
+    //             source: '/propuestas',
+    //             destination: '/propuestas', // Redirige "/propuestas" a "/proposals"
+    //             permanent: true,
+    //         },
+    //         {
+    //             source: '/trayectoria',
+    //             destination: '/trayectoria', // Redirige "/trayectoria" a "/history"
+    //             permanent: true,
+    //         },
+    //     ]
+    // },
 }
 
 module.exports = nextConfig
