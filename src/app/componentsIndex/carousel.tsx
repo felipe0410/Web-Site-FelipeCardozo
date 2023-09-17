@@ -33,7 +33,7 @@ const CarouselComponent = () => {
   };
   return (
     <Carousel
-      swipeable={false}
+      swipeable={true}
       draggable={true}
       showDots={true}
       responsive={responsive}
